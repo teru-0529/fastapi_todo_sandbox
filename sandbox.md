@@ -8,3 +8,20 @@ FastAPI を使ってWEBアプリを作ってみる　その1
 https://nmomos.com/tips/2021/01/23/fastapi-docker-1/
 
 * SQLAlchemyを使用する
+
+公式
+https://fastapi.tiangolo.com/ja/
+
+## STEP01
+
+* PYTHONDONTWRITEBYTECODE
+モジュールをimportするとデフォルトでインタープリターがソースコードをbytecodeに変換した結果をpycファイルとして書き出すようになっているが不要。`__pycache__`という名前のディレクトリに出力される。
+https://devlights.hatenablog.com/entry/2018/02/23/124719
+
+* PYTHONUNBUFFERED
+非空なら標準出力・標準エラーのストリームのバッファリングを行わない
+https://www.lifewithpython.com/2021/05/python-docker-env-vars.html
+
+* vscodeのエクステンション/Lint
+https://yurupro.cloud/767/
+https://zenn.dev/yhay81/articles/yhay81-202102-pythonlint
