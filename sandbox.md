@@ -24,4 +24,5 @@ https://www.lifewithpython.com/2021/05/python-docker-env-vars.html
 
 * vscodeのエクステンション/Lint
 https://yurupro.cloud/767/
+https://endy-tech.hatenablog.jp/entry/get_started_with_python_with_vscode
 https://zenn.dev/yhay81/articles/yhay81-202102-pythonlint
