@@ -26,3 +26,9 @@ https://www.lifewithpython.com/2021/05/python-docker-env-vars.html
 https://yurupro.cloud/767/
 https://endy-tech.hatenablog.jp/entry/get_started_with_python_with_vscode
 https://zenn.dev/yhay81/articles/yhay81-202102-pythonlint
+
+## STEP03
+
+* .env と --env-file の違い
+https://qiita.com/SolKul/items/989727aeeafcae28ecf7
+https://labor.ewigleere.net/2022/05/23/docker-compose-change-enviroment-variables-file/

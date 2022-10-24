@@ -5,3 +5,9 @@ fastApiによるbackend開発
 
 ## python環境設定
 https://teruaki100.backlog.com/alias/wiki/9388
+
+## openAPI
+http://localhost:8000/docs/
+
+## pgWeb
+http://localhost:9101/
