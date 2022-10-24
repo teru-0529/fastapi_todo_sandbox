@@ -14,5 +14,8 @@
 		"python.analysis.extraPaths": [
 			"C:\\workspace\\fastapi\\venv\\lib\\site-packages\\"
 		],
+		"python.linting.flake8Args": [
+			"--max-line-length=120",
+		],
 	}
 }

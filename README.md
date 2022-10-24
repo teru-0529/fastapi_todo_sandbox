@@ -9,5 +9,5 @@ https://teruaki100.backlog.com/alias/wiki/9388
 ## openAPI
 http://localhost:8000/docs/
 
-## pgWeb
+## pgweb
 http://localhost:9101/
