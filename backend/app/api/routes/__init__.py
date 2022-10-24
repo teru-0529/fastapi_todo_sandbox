@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# test.py
+# __init__.py
 
 from app.api.routes.tasks import router as task_router
 from fastapi import APIRouter
