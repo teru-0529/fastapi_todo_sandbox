@@ -5,7 +5,7 @@ up: ## do docker compose up with hot release
 	docker compose --env-file ./backend/.env up
 
 down: ## do docker compose down
-	docker compose down
+	docker compose --env-file ./backend/.env down
 
 logs: ## tail docker compose logs
 	docker compose logs -f
