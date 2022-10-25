@@ -1,4 +1,4 @@
-.PHONY: up down logs ps
+.PHONY: up down logs ps shell migrate_head migrate_base
 
 DOCKER_TAG := latest
 up: ## do docker compose up with hot release
@@ -12,6 +12,15 @@ logs: ## tail docker compose logs
 
 ps: ## check container status
 	docker compose ps
+
+shell: ## login api shell
+	docker exec -it api /bin/sh
+
+migrate_head:
+	docker compose --env-file ./backend/.env run --rm api alembic upgrade head
+
+migrate_base:
+	docker compose --env-file ./backend/.env run --rm api alembic downgrade base
 
 # test: ## execute tests
 # 	go test -v ./...
