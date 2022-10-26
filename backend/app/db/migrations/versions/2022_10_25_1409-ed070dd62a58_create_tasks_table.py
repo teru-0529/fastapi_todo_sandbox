@@ -1,8 +1,8 @@
 """create_tasks_table
 
-Revision ID: 34a655057c89
-Revises: b766ada0b76b
-Create Date: 2022-10-25 12:32:30.748593
+Revision ID: ed070dd62a58
+Revises: 3af1070341c5
+Create Date: 2022-10-25 14:09:11.820940
 
 """
 from typing import Tuple
@@ -11,8 +11,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = "34a655057c89"
-down_revision = "b766ada0b76b"
+revision = "ed070dd62a58"
+down_revision = "3af1070341c5"
 branch_labels = None
 depends_on = None
 

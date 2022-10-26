@@ -52,3 +52,20 @@ https://stackoverflow.com/questions/49582020/sqlalchemy-alembic-create-schema-mi
 
 * default値の付け方　server_default=xxx
 https://gene.hatenablog.com/entry/20140131/1391186587
+
+* timestampの使い方
+https://nmomos.com/tips/2021/02/21/fastapi-docker-6/
+
+* postgresqlのtimezone
+https://qiita.com/rururu_kenken/items/972314402d588e073d40
+https://zenn.dev/team_zenn/articles/postgresql-timestamp
+
+* sql
+https://zenn.dev/team_zenn/articles/postgresql-timestamp
+https://qiita.com/rururu_kenken/items/972314402d588e073d40
+
+INSERT INTO todo.tasks VALUES (DEFAULT, 'title1', 'desctiption', '316');
+UPDATE todo.tasks SET status = 'DOING' WHERE id = 1;
+show timezone;
+select now();
+SET SESSION timezone TO 'Asia/Tokyo';

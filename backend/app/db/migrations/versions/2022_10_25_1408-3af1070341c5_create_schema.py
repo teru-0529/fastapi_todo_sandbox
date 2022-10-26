@@ -1,8 +1,8 @@
 """create_schema
 
-Revision ID: b766ada0b76b
+Revision ID: 3af1070341c5
 Revises:
-Create Date: 2022-10-24 21:40:51.026431
+Create Date: 2022-10-25 14:08:59.952341
 
 """
 from alembic import op
@@ -11,7 +11,7 @@ from alembic import op
 
 
 # revision identifiers, used by Alembic.
-revision = "b766ada0b76b"
+revision = "3af1070341c5"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,7 +22,7 @@ def create_updated_at_trigger() -> None:
         """
         CREATE FUNCTION set_modified_at() RETURNS TRIGGER AS $$
         BEGIN
-            NEW.modified_at := now() AT TIME ZONE 'Asia/Tokyo';
+            NEW.modified_at := now();
             return NEW;
         END;
         $$ LANGUAGE plpgsql;
@@ -31,6 +31,7 @@ def create_updated_at_trigger() -> None:
 
 
 def upgrade() -> None:
+    op.execute("SET SESSION timezone TO 'Asia/Tokyo';")
     op.execute("CREATE SCHEMA todo;")
     create_updated_at_trigger()
 
