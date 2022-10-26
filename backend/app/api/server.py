@@ -19,7 +19,7 @@ def get_application():
     )
 
     app.add_event_handler("startup", repository.create_start_app_handler(app))
-    app.add_event_handler("startup", repository.create_stop_app_handler(app))
+    app.add_event_handler("shutdown", repository.create_stop_app_handler(app))
 
     app.include_router(api_router, prefix=config.API_PREFIX)
     return app
