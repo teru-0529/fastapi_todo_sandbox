@@ -17,10 +17,13 @@ class TaskBase(CoreModel):
     title: Optional[str]
     description: Optional[str]
     asaignee_id: Optional[str]
+    status: Optional[TaskStatus]
 
 
-class TaskCreate(TaskBase):
+class TaskCreate(CoreModel):
     title: str
+    description: Optional[str]
+    asaignee_id: Optional[str]
 
 
 class TaskUpdate(TaskBase):
@@ -35,4 +38,4 @@ class TaskInDB(IDModelMixin, TaskBase):
 
 
 class TaskPublic(IDModelMixin, TaskBase):
-    status: Optional[TaskStatus]
+    pass

@@ -24,7 +24,7 @@ async def get_all_hedgehogs() -> List[dict]:
 @router.post(
     "/",
     response_model=TaskPublic,
-    name="tasks:create-task",
+    name="tasks:create",
     status_code=HTTP_201_CREATED,
 )
 async def create_task(
