@@ -18,12 +18,14 @@ class TaskBase(CoreModel):
     description: Optional[str]
     asaignee_id: Optional[str]
     status: Optional[TaskStatus]
+    is_significant: Optional[bool]
 
 
 class TaskCreate(CoreModel):
     title: str
     description: Optional[str]
     asaignee_id: Optional[str]
+    is_significant: bool = False
 
 
 class TaskUpdate(TaskBase):
@@ -35,6 +37,7 @@ class TaskUpdate(TaskBase):
 class TaskInDB(IDModelMixin, TaskBase):
     title: str
     status: TaskStatus
+    is_significant: bool
 
 
 class TaskPublic(IDModelMixin, TaskBase):
