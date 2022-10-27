@@ -25,6 +25,7 @@ def timestamps(indexed: bool = False) -> Tuple[sa.Column, sa.Column]:
             server_default=sa.func.now(),
             nullable=False,
             index=indexed,
+            comment="登録日時",
         ),
         sa.Column(
             "modified_at",
@@ -32,6 +33,7 @@ def timestamps(indexed: bool = False) -> Tuple[sa.Column, sa.Column]:
             server_default=sa.func.now(),
             nullable=False,
             index=indexed,
+            comment="更新日時",
         ),
     )
 
@@ -50,6 +52,19 @@ def create_tasks_table() -> None:
             server_default="TODO",
             index=True,
             comment="タスクステータス",
+        ),
+        sa.Column(
+            "is_significant",
+            sa.Boolean,
+            nullable=False,
+            server_default="False",
+            comment="重要タスク",
+        ),
+        sa.Column(
+            "deadline",
+            sa.Date,
+            nullable=True,
+            comment="締切日",
         ),
         *timestamps(),
         schema="todo",
