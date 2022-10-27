@@ -60,6 +60,12 @@ def create_tasks_table() -> None:
             server_default="False",
             comment="重要タスク",
         ),
+        sa.Column(
+            "deadline",
+            sa.Date,
+            nullable=True,
+            comment="締切日",
+        ),
         *timestamps(),
         schema="todo",
     )

@@ -28,7 +28,7 @@ async def get_all_hedgehogs() -> List[dict]:
     status_code=HTTP_201_CREATED,
 )
 async def create_task(
-    new_task: TaskCreate = Body(..., embed=True),
+    new_task: TaskCreate = Body(...),
     task_repo: TaskRepository = Depends(get_repository(TaskRepository)),
 ) -> TaskPublic:
     task = await task_repo.create(new_task=new_task)

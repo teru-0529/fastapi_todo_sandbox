@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # tasks.py
 
+from datetime import date
 from enum import Enum
 from typing import Optional
 
@@ -19,6 +20,7 @@ class TaskBase(CoreModel):
     asaignee_id: Optional[str]
     status: Optional[TaskStatus]
     is_significant: Optional[bool]
+    deadline: Optional[date]
 
 
 class TaskCreate(CoreModel):
@@ -26,6 +28,18 @@ class TaskCreate(CoreModel):
     description: Optional[str]
     asaignee_id: Optional[str]
     is_significant: bool = False
+    deadline: Optional[date]
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "title": "create db model",
+                "description": "データベースモデルを作成する。",
+                "asaignee_id": "000",
+                "is_significant": False,
+                "deadline": "2022-10-27",
+            }
+        }
 
 
 class TaskUpdate(TaskBase):
@@ -42,3 +56,16 @@ class TaskInDB(IDModelMixin, TaskBase):
 
 class TaskPublic(IDModelMixin, TaskBase):
     pass
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "id": 1,
+                "title": "create db model",
+                "description": "データベースモデルを作成する。",
+                "asaignee_id": "000",
+                "status": "TODO",
+                "is_significant": False,
+                "deadline": "2022-10-27",
+            }
+        }
