@@ -25,7 +25,7 @@ async def get_all_hedgehogs() -> List[dict]:
     "/",
     response_model=TaskPublic,
     name="tasks:create",
-    response_description="Created new Task",
+    response_description="Created New Task",
     status_code=HTTP_201_CREATED,
 )
 async def create_task(
@@ -41,5 +41,5 @@ async def create_task(
     - **is_significant**: 重要タスクの場合にTrue[Default=False]
     - **deadline**: タスク期限日(YYYY-MM-DD) ※当日以降の日付を指定可能
     """
-    task = await task_repo.create(new_task=new_task)
-    return task
+    created_task = await task_repo.create(new_task=new_task)
+    return created_task

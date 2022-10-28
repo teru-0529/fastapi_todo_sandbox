@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# repository.py
+# database.py
 
 from typing import Callable
 
