@@ -69,3 +69,9 @@ UPDATE todo.tasks SET status = 'DOING' WHERE id = 1;
 show timezone;
 select now();
 SET SESSION timezone TO 'Asia/Tokyo';
+
+
+## STEP06
+
+* sqlModel・・・PydanicとSQLAlcemyを統合して開発、FastApiと同じ人が作ったらしい
+https://qiita.com/sand/items/26cd2b61b42cfb366d53

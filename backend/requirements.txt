@@ -6,3 +6,7 @@ databases[postgresql]
 SQLAlchemy
 alembic
 psycopg2
+
+autopep8
+black
+flake8

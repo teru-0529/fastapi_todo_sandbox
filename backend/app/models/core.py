@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # core.py
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class CoreModel(BaseModel):
@@ -9,4 +9,4 @@ class CoreModel(BaseModel):
 
 
 class IDModelMixin(BaseModel):
-    id: int
+    id: int = Field(title="Id", description="リソースのユニーク性を担保するID", ge=1, example=10)
