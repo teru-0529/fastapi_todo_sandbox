@@ -5,7 +5,7 @@ from datetime import date, datetime
 from enum import Enum
 from typing import Optional
 
-from app.models.core import CoreModel, IDModelMixin
+from app.api.schemas.core import CoreModel, IDModelMixin
 from pydantic import Field, validator
 
 

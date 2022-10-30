@@ -23,3 +23,15 @@ DATABASE_URL = config(
     cast=DatabaseURL,
     default=f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}",
 )
+
+DB_SYNC_URL = config(
+    "DB_SYNC_URL",
+    cast=str,
+    default=f"postgresql+psycopg2://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}",
+)
+
+DB_ASYNC_URL = config(
+    "DB_ASYNC_URL",
+    cast=str,
+    default=f"postgresql+asyncpg://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}",
+)

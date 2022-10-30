@@ -4,9 +4,11 @@
 from typing import List
 
 from app.api.dependencies.database import get_repository
+from app.api.schemas.tasks import TaskCreate, TaskPublic
+from app.db.database import get_db
 from app.db.repositories.tasks import TaskRepository
-from app.models.tasks import TaskCreate, TaskPublic
 from fastapi import APIRouter, Body, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
 from starlette.status import HTTP_201_CREATED
 
 router = APIRouter()
@@ -29,6 +31,7 @@ async def get_all_hedgehogs() -> List[dict]:
     status_code=HTTP_201_CREATED,
 )
 async def create_task(
+    db: AsyncSession = Depends(get_db),
     new_task: TaskCreate = Body(...),
     task_repo: TaskRepository = Depends(get_repository(TaskRepository)),
 ) -> TaskPublic:

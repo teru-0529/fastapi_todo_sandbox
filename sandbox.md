@@ -75,3 +75,13 @@ SET SESSION timezone TO 'Asia/Tokyo';
 
 * sqlModel・・・PydanicとSQLAlcemyを統合して開発、FastApiと同じ人が作ったらしい
 https://qiita.com/sand/items/26cd2b61b42cfb366d53
+
+* 非同期通信
+https://zenn.dev/sh0nk/books/537bb028709ab9/viewer/b92ab0#%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC
+
+* メタデータからテーブルを取り出す（reflect）
+https://www.python.ambitious-engineer.com/archives/1481
+https://docs.sqlalchemy.org/en/14/core/reflection.html#reflecting-all-tables-at-once
+
+* 実DBからデータ構造を抽出する
+https://zenn.dev/myuki/books/02fe236c7bc377/viewer/5686a6

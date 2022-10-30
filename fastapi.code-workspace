@@ -15,7 +15,7 @@
 			"C:\\workspace\\fastapi\\venv\\lib\\site-packages\\"
 		],
 		"python.linting.flake8Args": [
-			"--max-line-length=120",
+			"--max-line-length=150",
 		],
 	}
 }
